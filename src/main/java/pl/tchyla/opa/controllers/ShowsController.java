@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.tchyla.opa.entities.Actors;
 import pl.tchyla.opa.entities.Shows;
+import pl.tchyla.opa.entities.Titles;
 import pl.tchyla.opa.services.ShowsService;
+import pl.tchyla.opa.services.TitlesService;
 
 import javax.persistence.EntityNotFoundException;
 import javax.validation.Valid;
@@ -18,10 +20,13 @@ import java.util.List;
 public class ShowsController {
 
     private final ShowsService showsService;
+    private final TitlesService titlesService;
 
-    public ShowsController(ShowsService showsService) {
+    public ShowsController(ShowsService showsService, TitlesService titlesService) {
         this.showsService = showsService;
+        this.titlesService = titlesService;
     }
+
 
     @GetMapping("/shows")
     public String showShows(Model model) {
@@ -33,6 +38,8 @@ public class ShowsController {
     @GetMapping("/addShows")
     public String showAddForm(Model model) {
         model.addAttribute("shows", new Shows());
+        List<Titles> titles = titlesService.getTitles();
+        model.addAttribute("titles", titles);
         return "shows/addShows";
     }
 
@@ -66,7 +73,7 @@ public class ShowsController {
         return "redirect:/shows/showShows";
     }
 
-    @GetMapping("/showShows/{id}")
+    @GetMapping("/showOneShows/{id}")
     public String showShow(@PathVariable("id") Long id, Model model){
         model.addAttribute("shows", showsService.findById(id).orElseThrow(EntityNotFoundException::new));
         return "shows/showOneShows";

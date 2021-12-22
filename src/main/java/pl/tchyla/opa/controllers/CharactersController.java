@@ -43,7 +43,7 @@ public class CharactersController {
             return "characters/addCharacters";
         }
         charactersService.add(characters);
-        return "redirect:/characters/showCharacters";
+        return "redirect:/characters";
     }
 
     @GetMapping("/editCharacters/{id}")
@@ -58,16 +58,16 @@ public class CharactersController {
             return "characters/editCharacters";
         }
         charactersService.edit(characters);
-        return "redirect:/characters/showCharacters";
+        return "redirect:/characters";
     }
 
     @GetMapping("/deleteCharacters/{id}")
     public String deleteCharacter(@PathVariable Long id){
         charactersService.delete(id);
-        return "redirect:/characters/showCharacters";
+        return "redirect:/characters";
     }
 
-    @GetMapping("showCharacters/{id}")
+    @GetMapping("showOneCharacters/{id}")
     public String showCharacter(Model model, @PathVariable long id){
         model.addAttribute("characters", charactersService.findById(id).orElseThrow(EntityNotFoundException::new));
         return "characters/showOneCharacters";

@@ -30,5 +30,6 @@
     </tr>
     </tbody>
 </table>
+<a href="<c:url value="/actors"/>">Lista użytkowników</a>
 </body>
 </html>

@@ -42,7 +42,7 @@ public class TitlesController {
             return "titles/addTitles";
         }
         titlesService.add(titles);
-        return "redirect:/titles/showTitles";
+        return "redirect:/titles";
     }
 
     @GetMapping("/editTitles/{id}")
@@ -57,16 +57,16 @@ public class TitlesController {
             return "titles/editTitles";
         }
         titlesService.edit(titles);
-        return "redirect:/titles/showTitles";
+        return "redirect:/titles";
     }
 
     @GetMapping("/deleteTitles/{id}")
     public String deleteTitle(@PathVariable Long id){
         titlesService.delete(id);
-        return "redirect:/titles/showTitles";
+        return "redirect:/titles";
     }
 
-    @GetMapping("/showTitles/{id}")
+    @GetMapping("/showOneTitles/{id}")
     public String showTitle(@PathVariable("id") Long id, Model model){
         model.addAttribute("titles", titlesService.findById(id).orElseThrow(EntityNotFoundException::new));
         return "titles/showOneTitles";

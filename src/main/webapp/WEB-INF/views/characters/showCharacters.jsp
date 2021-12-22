@@ -12,7 +12,7 @@
     <title>Characters</title>
 </head>
 <body>
-<a href="<c:url value="addCharacters"/>">"Dodaj nową rolę</a>
+<a href="<c:url value="addCharacters"/>">Dodaj nową rolę</a>
 <table border="1">
     <thead>
     <th>Nr</th>
@@ -35,5 +35,6 @@
     </c:forEach>
     </tbody>
 </table>
+<a href="<c:url value="/"/>"Strona główna</a>
 </body>
 </html>

@@ -41,7 +41,7 @@ public class StagesController {
             return "stages/addStages";
         }
         stagesService.add(stages);
-        return "redirect:/stages/showStages";
+        return "redirect:/stages";
     }
 
     @GetMapping("/editStages/{id}")
@@ -56,16 +56,16 @@ public class StagesController {
             return "stages/editStages";
         }
         stagesService.edit(stages);
-        return "redirect:/stages/showStages";
+        return "redirect:/stages";
     }
 
     @GetMapping("/deleteStages/{id}")
     public String deleteStage(@PathVariable Long id){
         stagesService.delete(id);
-        return "redirect:/stages/showStages";
+        return "redirect:/stages";
     }
 
-    @GetMapping("/showStages/{id}")
+    @GetMapping("/showOneStages/{id}")
     public String showStage(@PathVariable("id") Long id, Model model){
         model.addAttribute("stages", stagesService.findById(id).orElseThrow(EntityNotFoundException::new));
         return "stages/showOneStages";

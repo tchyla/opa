@@ -12,7 +12,7 @@
     <title>Stages</title>
 </head>
 <body>
-<a href="<c:url value="addStages"/>">"Dodaj nową scenę</a>
+<a href="<c:url value="addStages"/>">Dodaj nową scenę</a>
 <table border="1">
     <thead>
     <th>Nr</th>
@@ -32,5 +32,6 @@
     </c:forEach>
     </tbody>
 </table>
+<a href="<c:url value="/"/>">Strona główna</a>
 </body>
 </html>

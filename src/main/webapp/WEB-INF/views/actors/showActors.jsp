@@ -38,6 +38,6 @@
     </c:forEach>
     </tbody>
 </table>
-
+<a href="<c:url value="/"/>">Strona główna</a>
 </body>
 </html>

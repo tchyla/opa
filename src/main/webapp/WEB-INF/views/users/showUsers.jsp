@@ -12,7 +12,7 @@
     <title>Users</title>
 </head>
 <body>
-<a href="<c:url value="addUsers"/>">"Dodaj nowego użytkownika</a>
+<a href="<c:url value="addUsers"/>">Dodaj nowego użytkownika</a>
 <table border="1">
     <thead>
     <th>Nr</th>
@@ -38,6 +38,6 @@
     </c:forEach>
     </tbody>
 </table>
-
+<a href="<c:url value="/"/>">Strona główna</a>
 </body>
 </html>

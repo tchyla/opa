@@ -17,7 +17,6 @@
     <label for="characterName">Nazwa roli:</label>
     <form:input path="characterName"/>
     <form:errors path="characterName"/><br/>
-    <span id="characterName.errors">Niepoprawne dane. Nazwa roli powinna składać się z min. 2 liter.</span>
     <%--
     tu pole wyboru tytułu
     --%>

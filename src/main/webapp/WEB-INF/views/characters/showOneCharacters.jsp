@@ -27,5 +27,6 @@
     </tr>
     </tbody>
 </table>
+<a href="<c:url value="/characters"/>">Lista ról</a>
 </body>
 </html>

@@ -42,7 +42,7 @@ public class UsersController {
             return "users/addUsers";
         }
         usersService.add(users);
-        return "redirect:/users/showUsers";
+        return "redirect:/users";
     }
 
     @GetMapping("/editUsers/{id}")
@@ -57,16 +57,16 @@ public class UsersController {
             return "users/editUsers";
         }
         usersService.edit(users);
-        return "redirect:/users/showUsers";
+        return "redirect:/users";
     }
 
     @GetMapping("/deleteUsers/{id}")
     public String deleteUser(@PathVariable Long id){
         usersService.delete(id);
-        return "redirect:/users/showUsers";
+        return "redirect:/users";
     }
 
-    @GetMapping("/showUsers/{id}")
+    @GetMapping("/showOneUsers/{id}")
     public String showUser(@PathVariable("id") Long id, Model model){
         model.addAttribute("users", usersService.findById(id).orElseThrow(EntityNotFoundException::new));
         return "users/showOneUsers";

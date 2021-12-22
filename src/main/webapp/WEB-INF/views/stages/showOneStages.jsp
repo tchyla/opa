@@ -24,5 +24,6 @@
     </tr>
     </tbody>
 </table>
+<a href="<c:url value="/stages"/>">Lista scen</a>
 </body>
 </html>

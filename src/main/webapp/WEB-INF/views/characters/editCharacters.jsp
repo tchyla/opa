@@ -16,7 +16,7 @@
 <c:url var="edit_url" value="/editCharacters"/>
 <form:form method="post" modelAttribute="characters" action="${edit_url}">
     <form:hidden path="id"/>
-    <label for="characterName">Rola</label>
+    <label for="characterName">Nazwa roli:</label>
     <form:input path="characterName"/>
     <form:errors path="characterName"/><br/>
     <%--

@@ -17,7 +17,6 @@
     <label for="stageName">Nazwa sceny</label>
     <form:input path="stageName"/>
     <form:errors path="stageName"/><br/>
-    <span id="stageName.errors">Niepoprawne dane. Nazwa sceny powinna składać się z min. 2 liter.</span>
     <input type="submit" value="Save">
 </form:form>
 </body>

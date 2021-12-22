@@ -1,6 +1,6 @@
 /*package pl.tchyla.opa.services;
 
-import pl.tchyla.opa.interfaces.ContractValidatorInterface;
+
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

@@ -12,7 +12,7 @@
     <title>Titles</title>
 </head>
 <body>
-<a href="<c:url value="addTitles"/>">"Dodaj nowy tytuł</a>
+<a href="<c:url value="addTitles"/>">Dodaj nowy tytuł</a>
 <table border="1">
     <thead>
     <th>Nr</th>
@@ -38,6 +38,6 @@
     </c:forEach>
     </tbody>
 </table>
-
+<a href="<c:url value="/"/>">Strona główna</a>
 </body>
 </html>

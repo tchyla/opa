@@ -24,5 +24,6 @@
     </tr>
     </tbody>
 </table>
+<a href="<c:url value="/contract"/>">Lista rodzajów umów</a>
 </body>
 </html>

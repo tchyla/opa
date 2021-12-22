@@ -33,12 +33,12 @@ public class Actors {
 
     @NotNull
     @Column(unique = true)
-    @Email
+    @Email (regexp = "[_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\\.([a-zA-Z]{2,}){1}")
     private String email;
 
     @NotNull
-    @Pattern(regexp="^(?:(?:(?:(?:\\+|00)\\d{2})?[ -]?(?:(?:\\(0?\\d{2}\\))|(?:0?\\d{2})))?[ -]?(?:\\d{3}[- ]?\\d{2}[- ]?\\d{2}|\\d{2}[- ]?\\d{2}[- ]?\\d{3}|\\d{7})|(?:(?:(?:\\+|00)\\d{2})?[ -]?\\d{3}[ -]?\\d{3}[ -]?\\d{3}))$")
-    private int phone;
+    @Pattern(regexp="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]")
+    private String phone;
 
     private String password;
 
@@ -49,6 +49,6 @@ public class Actors {
     private List<Shows> shows = new ArrayList<>();
 
     @OneToOne
-    @JoinColumn(name = "contract_id")
+    @JoinColumn
     private Contract contract;
 }

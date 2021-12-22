@@ -13,11 +13,13 @@
     <title>Stages edit</title>
 </head>
 <body>
-<c:url var="edit_url" value="/WEB-INF/views/stages/editStages.jsp"/>
+<c:url var="edit_url" value="/editStages"/>
 <form:form method="post" modelAttribute="stages" action="${edit_url}">
     <form:hidden path="id"/>
+    <label for="stageName">Nazwa sceny</label>
     <form:input path="stageName"/>
     <form:errors path="stageName"/><br/>
+    <span id="stageName.errors">Niepoprawne dane. Nazwa sceny powinna składać się z min. 2 liter..</span>
     <input type="submit" value="Save">
 </form:form>
 </body>

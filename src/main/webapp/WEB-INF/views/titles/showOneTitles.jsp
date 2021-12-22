@@ -14,11 +14,11 @@
 <body>
 <table border="1">
     <thead>
-    <th>id</th>
-    <th>titleName</th>
-    <th>director</th>
-    <th>duration</th>
-    <th>phone</th>
+    <th>Nr</th>
+    <th>Tytuł spektaklu</th>
+    <th>Imię i nazwisko reżysera</th>
+    <th>Czas trwania spektaklu (w minutach)</th>
+    <th>Liczba przerw</th>
     </thead>
     <tbody>
     <tr>

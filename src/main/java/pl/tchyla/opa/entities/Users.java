@@ -6,26 +6,36 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
-@Getter @Setter @NoArgsConstructor
+@Getter
+@Setter
+@NoArgsConstructor
 public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Setter(AccessLevel.PROTECTED)
     private long id;
 
-    @Column(nullable = false)
+    @NotNull
+    @Size(min = 2)
     private String name;
 
-    @Column(nullable = false)
+    @NotNull
+    @Size(min = 2)
     private String surname;
 
-    @Column(nullable = false, unique = true)
+    @NotNull
+    @Column(unique = true)
+    @Email
     private String email;
 
-    @Column(nullable = false)
+    @NotNull
+    @Pattern(regexp="^(?:(?:(?:(?:\\+|00)\\d{2})?[ -]?(?:(?:\\(0?\\d{2}\\))|(?:0?\\d{2})))?[ -]?(?:\\d{3}[- ]?\\d{2}[- ]?\\d{2}|\\d{2}[- ]?\\d{2}[- ]?\\d{3}|\\d{7})|(?:(?:(?:\\+|00)\\d{2})?[ -]?\\d{3}[ -]?\\d{3}[ -]?\\d{3}))$")
     private int phone;
 
     private String password;

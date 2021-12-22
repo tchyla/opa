@@ -15,12 +15,11 @@
 <a href="<c:url value="addActors"/>">Dodaj nowego aktora</a>
 <table border="1">
     <thead>
-    <th>id</th>
-    <th>name</th>
-    <th>surname</th>
-    <th>email</th>
-    <th>phone</th>
-    <th>full time actor</th>
+    <th>Nr</th>
+    <th>Imię</th>
+    <th>Nazwisko</th>
+    <th>E-mail</th>
+    <th>Telefon</th>
     </thead>
     <tbody>
     <c:forEach items="${actors}" var="actors">
@@ -30,7 +29,6 @@
         <td><c:out value="${actors.surname}"/></td>
         <td><c:out value="${actors.email}"/></td>
         <td><c:out value="${actors.phone}"/></td>
-        <td><c:out value="${actors.fullTimeActor}"/></td>
             <td>
                 <a href="<c:out value="editActors/${actors.id}"/>">Edytuj dane aktora</a>
                 <a href="<c:out value="deleteActors/${actors.id}"/>">Usuń dane aktora</a>

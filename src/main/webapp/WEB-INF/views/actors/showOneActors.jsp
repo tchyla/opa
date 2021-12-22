@@ -14,12 +14,11 @@
 <body>
 <table border="1">
     <thead>
-    <th>id</th>
-    <th>name</th>
-    <th>surname</th>
-    <th>email</th>
-    <th>phone</th>
-    <th>full time actor</th>
+    <th>Nr</th>
+    <th>Imię</th>
+    <th>Nazwisko</th>
+    <th>E-mail</th>
+    <th>Telefon</th>
     </thead>
     <tbody>
     <tr>
@@ -28,7 +27,6 @@
         <td><c:out value="${actors.surname}"/></td>
         <td><c:out value="${actors.email}"/></td>
         <td><c:out value="${actors.phone}"/></td>
-        <td><c:out value="${actors.fullTimeActor}"/></td>
     </tr>
     </tbody>
 </table>

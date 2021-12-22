@@ -13,9 +13,10 @@
     <title>Characters edit</title>
 </head>
 <body>
-<c:url var="edit_url" value="/WEB-INF/views/characters/editCharacters.jsp"/>
+<c:url var="edit_url" value="/editCharacters"/>
 <form:form method="post" modelAttribute="characters" action="${edit_url}">
     <form:hidden path="id"/>
+    <label for="characterName">Rola</label>
     <form:input path="characterName"/>
     <form:errors path="characterName"/><br/>
     <%--

@@ -12,14 +12,14 @@
     <title>Titles</title>
 </head>
 <body>
-<a href="<c:url value="/WEB-INF/views/titles/addTitles.jsp"/>">"Dodaj nowy tytuł</a>
+<a href="<c:url value="addTitles"/>">"Dodaj nowy tytuł</a>
 <table border="1">
     <thead>
-    <th>id</th>
-    <th>titleName</th>
-    <th>director</th>
-    <th>duration</th>
-    <th>interacts</th>
+    <th>Nr</th>
+    <th>Tytuł spektaklu</th>
+    <th>Imię i nazwisko reżysera</th>
+    <th>Czas trwania spektaklu (w minutach)</th>
+    <th>Liczba przerw</th>
     </thead>
     <tbody>
     <c:forEach items="${titles}" var="titles">
@@ -30,9 +30,9 @@
             <td><c:out value="${titles.duration}"/></td>
             <td><c:out value="${titles.interacts}"/></td>
             <td>
-                <a href="<c:out value="/titles/editTitles/${titles.id}"/>">Edytuj dane aktora</a>
-                <a href="<c:out value="/titles/deleteTitles/${titles.id}"/>">Usuń dane aktora</a>
-                <a href="<c:out value="/titles/showOneTitles/${titles.id}"/>">Pokaż dane aktora</a>
+                <a href="<c:out value="editTitles/${titles.id}"/>">Edytuj dane tytułu</a>
+                <a href="<c:out value="deleteTitles/${titles.id}"/>">Usuń dane tytułu</a>
+                <a href="<c:out value="showOneTitles/${titles.id}"/>">Pokaż dane tytułu</a>
             </td>
         </tr>
     </c:forEach>

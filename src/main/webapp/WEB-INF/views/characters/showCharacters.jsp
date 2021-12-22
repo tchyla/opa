@@ -12,11 +12,11 @@
     <title>Characters</title>
 </head>
 <body>
-<a href="<c:url value="/WEB-INF/views/characters/addCharacters.jsp"/>">"Dodaj nową rolę</a>
+<a href="<c:url value="addCharacters"/>">"Dodaj nową rolę</a>
 <table border="1">
     <thead>
-    <th>id</th>
-    <th>characterName</th>
+    <th>Nr</th>
+    <th>Rola</th>
     </thead>
     <tbody>
     <c:forEach items="${characters}" var="characters">
@@ -27,9 +27,9 @@
                 tu pole z jakiego tytułu
                 --%>
             <td>
-                <a href="<c:out value="/characters/editCharacters/${characters.id}"/>">Edytuj dane roli</a>
-                <a href="<c:out value="/characters/deleteCharacters/${characters.id}"/>">Usuń dane roli</a>
-                <a href="<c:out value="/characters/showOneCharacters/${characters.id}"/>">Pokaż dane roli</a>
+                <a href="<c:out value="editCharacters/${characters.id}"/>">Edytuj dane roli</a>
+                <a href="<c:out value="deleteCharacters/${characters.id}"/>">Usuń dane roli</a>
+                <a href="<c:out value="showOneCharacters/${characters.id}"/>">Pokaż dane roli</a>
             </td>
         </tr>
     </c:forEach>

@@ -4,17 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.tchyla.opa.entities.Actors;
-import pl.tchyla.opa.pojo.ActorsContract;
 import pl.tchyla.opa.services.ActorsService;
 
 import javax.persistence.EntityNotFoundException;
 import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 @Controller
@@ -73,13 +69,5 @@ public class ActorsController {
     public String showActor(@PathVariable("id") Long id, Model model) {
         model.addAttribute("actors", actorsService.findById(id).orElseThrow(EntityNotFoundException::new));
         return "actors/showOneActors";
-    }
-
-    @ModelAttribute("contracts")
-    public Collection<ActorsContract> contracts() {
-        List<ActorsContract> contracts = new ArrayList<ActorsContract>();
-        contracts.add(new ActorsContract(1, "Aktor etatowy"));
-        contracts.add(new ActorsContract(2, "Aktor nieetatowy"));
-        return contracts;
     }
 }

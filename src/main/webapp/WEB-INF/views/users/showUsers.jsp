@@ -12,14 +12,14 @@
     <title>Users</title>
 </head>
 <body>
-<a href="<c:url value="/WEB-INF/views/users/addUsers.jsp"/>">"Dodaj nowego użytkownika</a>
+<a href="<c:url value="addUsers"/>">"Dodaj nowego użytkownika</a>
 <table border="1">
     <thead>
-    <th>id</th>
-    <th>name</th>
-    <th>surname</th>
-    <th>email</th>
-    <th>phone</th>
+    <th>Nr</th>
+    <th>Imię</th>
+    <th>Nazwisko</th>
+    <th>E-mail</th>
+    <th>Telefon</th>
     </thead>
     <tbody>
     <c:forEach items="${users}" var="users">
@@ -30,9 +30,9 @@
             <td><c:out value="${users.email}"/></td>
             <td><c:out value="${users.phone}"/></td>
             <td>
-                <a href="<c:out value="/users/editUsers/${users.id}"/>">Edytuj dane użytkownika</a>
-                <a href="<c:out value="/users/deleteUsers/${users.id}"/>">Usuń dane użytkownika</a>
-                <a href="<c:out value="/users/showOneUsers/${users.id}"/>">Pokaż dane użytkownika</a>
+                <a href="<c:out value="editUsers/${users.id}"/>">Edytuj dane użytkownika</a>
+                <a href="<c:out value="deleteUsers/${users.id}"/>">Usuń dane użytkownika</a>
+                <a href="<c:out value="showOneUsers/${users.id}"/>">Pokaż dane użytkownika</a>
             </td>
         </tr>
     </c:forEach>

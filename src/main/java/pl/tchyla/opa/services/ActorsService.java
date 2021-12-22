@@ -1,13 +1,9 @@
 package pl.tchyla.opa.services;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import pl.tchyla.opa.entities.Actors;
-import pl.tchyla.opa.pojo.ActorsContract;
 import pl.tchyla.opa.repositories.ActorsRepository;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 

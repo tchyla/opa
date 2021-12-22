@@ -12,11 +12,11 @@
     <title>Stages</title>
 </head>
 <body>
-<a href="<c:url value="/WEB-INF/views/stages/addStages.jsp"/>">"Dodaj nowego aktora</a>
+<a href="<c:url value="addStages"/>">"Dodaj nową scenę</a>
 <table border="1">
     <thead>
-    <th>id</th>
-    <th>stageName</th>
+    <th>Nr</th>
+    <th>Nazwa sceny</th>
     </thead>
     <tbody>
     <c:forEach items="${stages}" var="stages">
@@ -24,9 +24,9 @@
             <td><c:out value="${stages.id}"/></td>
             <td><c:out value="${stages.stageName}"/></td>
             <td>
-                <a href="<c:out value="/stages/editStages/${stages.id}"/>">Edytuj dane sceny</a>
-                <a href="<c:out value="/stages/deleteStages/${stages.id}"/>">Usuń dane sceny</a>
-                <a href="<c:out value="/stages/showOneStages/${stages.id}"/>">Pokaż dane sceny</a>
+                <a href="<c:out value="editStages/${stages.id}"/>">Edytuj dane sceny</a>
+                <a href="<c:out value="deleteStages/${stages.id}"/>">Usuń dane sceny</a>
+                <a href="<c:out value="showOneStages/${stages.id}"/>">Pokaż dane sceny</a>
             </td>
         </tr>
     </c:forEach>

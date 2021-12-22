@@ -14,8 +14,8 @@
 <body>
 <table border="1">
     <thead>
-    <th>id</th>
-    <th>characterName</th>
+    <th>Nr</th>
+    <th>Rola</th>
     </thead>
     <tbody>
     <tr>
